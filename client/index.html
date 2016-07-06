@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src='/angular/angular.js'></script>
+        <script type="text/javascript" src='/angular-route/angular-route.js'></script>
+        <script type="text/javascript" src='/angular-ui-bootstrap/dist/ui-bootstrap.js'></script>
+        <script type="text/javascript" src='/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js'></script>
+        <script type="text/javascript" src='/jquery/dist/jquery.js'></script>
+        <script type="text/javascript" src='/static/js/app.js'></script>
+        <link rel="stylesheet" type="text/css" href="/static/font-awesome/css/font-awesome.css">
+        <!--<link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+        <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'  type='text/css'>
+        <script type='text/javascript'>
+            $(document).ready(function(){
+                $(document).scroll(function () { 
+                    if ($(this).scrollTop() > 1 && $(this).scrollTop() > 200) {
+                        console.log('dwon')
+                        $("#welcome").animate({opacity: 0.34}, "1000"); return; 
+                    }else{
+                        console.log('ip')
+                        $("#welcome").animate({opacity: 1}, "1000").stop( true, true ); 
+                    }
+                });
+                // $("#scrollToPortfolio").click(function() {
+                //     $('html,body').animate({
+                //         scrollTop: $("#portfolio").offset().top},
+                //         'slow');
+                //     return false
+                // });
+
+                // $("#scrollToAboutMe").click(function() {
+                //     $('html,body').animate({
+                //         scrollTop: $("#aboutMe").offset().top},
+                //         'slow');
+                //     return false
+                // });
+
+                // $(".back-to-top").click(function() {
+                //     $('html,body').animate({
+                //         scrollTop: $("#hero").offset().top},
+                //         'slow');
+                //     return false
+                // });
+
+                $('.parallax').parallax();
+                $('.modal-trigger').leanModal();
+            });
+            
+        </script>
+    </head>
+    <body>
+        <div id='partial' ng-view=''></div>
+		<div class="container">
+        </div>
+    
+    </body>
+</html>
