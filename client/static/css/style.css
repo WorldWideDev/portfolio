@@ -34,3 +34,23 @@ body{
 	margin: 15px;
 	box-shadow: 5px 5px 5px #A18C80;
 }
+.techbox{
+	/*border: 1px dotted red;*/
+	margin-top: 20px;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	height: 250px;
+	width: 300px;
+}
+    .logoimg{
+	height: 60px;
+	width: 60px;
+	border-radius: 5px;
+	box-shadow: 4px 4px 5px black;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	background-color: white;
+	text-align: center;
+}
