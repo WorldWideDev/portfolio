@@ -19,13 +19,9 @@
         <script type='text/javascript'>
             $(document).ready(function(){
                 $(document).scroll(function () { 
-                    if ($(this).scrollTop() > 1 && $(this).scrollTop() > 200) {
-                        console.log('dwon')
-                        $("#welcome").animate({opacity: 0.34}, "1000"); return; 
-                    }else{
-                        console.log('ip')
-                        $("#welcome").animate({opacity: 1}, "1000").stop( true, true ); 
-                    }
+                    var fromtop = $(document).scrollTop();
+                    console.log(150/fromtop);
+                    $('.parallax').css({opacity: 150/fromtop});
                 });
                 // $("#scrollToPortfolio").click(function() {
                 //     $('html,body').animate({
@@ -50,6 +46,7 @@
 
                 $('.parallax').parallax();
                 $('.modal-trigger').leanModal();
+                $('.tooltipped').tooltip({delay: 50});
             });
             
         </script>
