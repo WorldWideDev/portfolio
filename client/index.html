@@ -9,16 +9,18 @@
         <script type="text/javascript" src='/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js'></script>
         <script type="text/javascript" src='/jquery/dist/jquery.js'></script>
         <script type="text/javascript" src='/static/js/app.js'></script>
+        <script src="https://use.fontawesome.com/50866d13b0.js"></script>
         <link rel="stylesheet" type="text/css" href="/static/font-awesome/css/font-awesome.css">
         <!--<link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css">-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/static/css/animate.css">
         <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'  type='text/css'>
         <script type='text/javascript'>
             $(document).ready(function(){
-                $(document).scroll(function () { 
+                $(document).scroll(function () {
                     var fromtop = $(document).scrollTop();
                     console.log(150/fromtop);
                     $('.parallax').css({opacity: 150/fromtop});
@@ -48,13 +50,13 @@
                 $('.modal-trigger').leanModal();
                 $('.tooltipped').tooltip({delay: 50});
             });
-            
+
         </script>
     </head>
     <body>
         <div id='partial' ng-view=''></div>
 		<div class="container">
         </div>
-    
+
     </body>
 </html>
